@@ -1,0 +1,1690 @@
+/* =========================================================
+   AGORA DISCOVERY
+   Dark / Gold / Classical / Editorial
+========================================================= */
+
+.agora-discover-page {
+
+    --discover-bg: #08090c;
+    --discover-panel: rgba(17, 18, 24, 0.78);
+
+    --discover-gold: #e5a93c;
+    --discover-gold-light: #f6d075;
+    --discover-gold-dark: #9e6e19;
+
+    --discover-text: #f1f5f9;
+    --discover-muted: #94a3b8;
+
+    --discover-border: rgba(229, 169, 60, 0.18);
+    --discover-border-soft: rgba(255, 255, 255, 0.07);
+
+    --discover-serif: "Cinzel", Georgia, serif;
+    --discover-sans:
+        "Plus Jakarta Sans",
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 75% 10%,
+            rgba(229, 169, 60, 0.08),
+            transparent 30%),
+        radial-gradient(circle at 15% 60%,
+            rgba(56, 189, 248, 0.025),
+            transparent 30%),
+        var(--discover-bg);
+
+    color: var(--discover-text);
+
+    font-family: var(--discover-sans);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   GRAIN
+========================================================= */
+
+.discover-grain {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.045;
+
+    z-index: 20;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+
+/* =========================================================
+   AMBIENT GLOWS
+========================================================= */
+
+.discover-glow {
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+    opacity: 0.06;
+}
+
+.discover-glow-one {
+
+    top: 500px;
+    right: -250px;
+
+    background: var(--discover-gold);
+}
+
+.discover-glow-two {
+
+    top: 1500px;
+    left: -300px;
+
+    background: #38bdf8;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.section-kicker {
+
+    display: inline-block;
+
+    color: var(--discover-gold);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+
+    margin-bottom: 20px;
+}
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 60px;
+
+    margin-bottom: 50px;
+}
+
+.section-heading h2,
+.worlds-heading h2,
+.trending-header h2,
+.explore-heading h2,
+.discover-final h2 {
+
+    margin: 0;
+
+    font-family: var(--discover-serif);
+
+    font-size: clamp(38px, 5vw, 68px);
+
+    line-height: 0.98;
+
+    font-weight: 400;
+
+    letter-spacing: -0.025em;
+}
+
+.section-heading h2 em,
+.worlds-heading h2 em,
+.trending-header h2 em,
+.explore-heading h2 em,
+.discover-final h2 em {
+
+    color: var(--discover-gold-light);
+
+    font-style: normal;
+}
+
+.section-heading>p {
+
+    max-width: 330px;
+
+    margin: 0;
+
+    color: var(--discover-muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+.compact {
+
+    align-items: center;
+}
+
+.subtle-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--discover-gold-light);
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    letter-spacing: 0.18em;
+
+    transition: 0.25s ease;
+}
+
+.subtle-link:hover {
+
+    letter-spacing: 0.25em;
+}
+
+.subtle-link span {
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.discover-hero {
+
+    position: relative;
+
+    min-height: 760px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-bottom:
+        1px solid var(--discover-border-soft);
+}
+
+.discover-hero-content {
+
+    position: relative;
+
+    z-index: 4;
+
+    text-align: center;
+
+    max-width: 900px;
+}
+
+.discover-kicker {
+
+    color: var(--discover-gold);
+
+    font-size: 9px;
+
+    letter-spacing: 0.35em;
+
+    font-weight: 600;
+}
+
+.discover-hero h1 {
+
+    margin: 30px 0;
+
+    font-family: var(--discover-serif);
+
+    font-size: clamp(60px, 9vw, 130px);
+
+    line-height: 0.88;
+
+    font-weight: 400;
+
+    letter-spacing: -0.045em;
+}
+
+.discover-hero h1 em {
+
+    color: var(--discover-gold-light);
+
+    font-style: normal;
+}
+
+.discover-hero p {
+
+    color: var(--discover-muted);
+
+    font-size: 13px;
+
+    letter-spacing: 0.05em;
+}
+
+.discover-scroll-button {
+
+    margin-top: 45px;
+
+    padding: 13px 22px;
+
+    border: 1px solid var(--discover-border);
+
+    background: rgba(229, 169, 60, 0.04);
+
+    color: var(--discover-gold-light);
+
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.discover-scroll-button span {
+
+    margin-left: 15px;
+
+    font-size: 15px;
+}
+
+.discover-scroll-button:hover {
+
+    background: rgba(229, 169, 60, 0.12);
+
+    border-color: var(--discover-gold);
+
+}
+
+
+/* =========================================================
+   HERO ORBIT
+========================================================= */
+
+.hero-orbit {
+
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    opacity: 0.35;
+}
+
+.hero-orbit-ring {
+
+    position: absolute;
+
+    inset: 0;
+
+    border:
+        1px solid rgba(229, 169, 60, 0.16);
+
+    border-radius: 50%;
+}
+
+.hero-ring-two {
+
+    inset: 80px;
+
+    transform: rotate(45deg);
+
+    border-radius: 45%;
+}
+
+.hero-ring-three {
+
+    inset: 160px;
+
+    transform: rotate(-25deg);
+
+    border-color:
+        rgba(229, 169, 60, 0.25);
+}
+
+.hero-orbit-center {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 70px;
+    height: 70px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid var(--discover-gold);
+
+    color: var(--discover-gold-light);
+
+    font-family: var(--discover-serif);
+
+    font-size: 28px;
+
+    box-shadow:
+        0 0 50px rgba(229, 169, 60, 0.15);
+}
+
+.hero-orbit-point {
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--discover-gold);
+
+    box-shadow:
+        0 0 15px var(--discover-gold);
+}
+
+.hero-point-one {
+
+    top: 12%;
+    left: 50%;
+}
+
+.hero-point-two {
+
+    right: 7%;
+    top: 45%;
+}
+
+.hero-point-three {
+
+    bottom: 15%;
+    left: 20%;
+}
+
+
+/* =========================================================
+   AGORA SELECT
+========================================================= */
+
+.agora-select-section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 130px 40px;
+}
+
+.select-feature {
+
+    min-height: 470px;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    border:
+        1px solid var(--discover-border);
+
+    background:
+        rgba(15, 16, 21, 0.75);
+}
+
+.select-visual {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-right:
+        1px solid var(--discover-border);
+
+    background:
+        radial-gradient(circle,
+            rgba(229, 169, 60, 0.11),
+            transparent 55%);
+}
+
+.select-visual::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 270px;
+    height: 270px;
+
+    border:
+        1px solid rgba(229, 169, 60, 0.25);
+
+    transform: rotate(45deg);
+}
+
+.select-visual::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border:
+        1px solid rgba(229, 169, 60, 0.08);
+
+    border-radius: 50%;
+}
+
+.select-visual-symbol {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 70px;
+
+    color: var(--discover-gold-light);
+}
+
+.select-visual span {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 35px;
+
+    color: var(--discover-muted);
+
+    font-size: 8px;
+
+    letter-spacing: 0.3em;
+}
+
+.select-content {
+
+    padding: 70px 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.select-category {
+
+    color: var(--discover-gold);
+
+    font-size: 8px;
+
+    letter-spacing: 0.25em;
+}
+
+.select-content h3 {
+
+    margin: 18px 0;
+
+    font-family: var(--discover-serif);
+
+    font-size: 43px;
+
+    line-height: 1;
+
+    font-weight: 400;
+}
+
+.select-content h3 em {
+
+    color: var(--discover-gold-light);
+
+    font-style: normal;
+}
+
+.select-content p {
+
+    max-width: 330px;
+
+    color: var(--discover-muted);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+.gold-arrow-link {
+
+    margin-top: 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: var(--discover-gold-light);
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+}
+
+.gold-arrow-link span {
+
+    font-size: 18px;
+
+    transition: 0.25s ease;
+}
+
+.gold-arrow-link:hover span {
+
+    transform:
+        translate(4px, -4px);
+}
+
+
+/* =========================================================
+   POPULAR PRODUCTS
+========================================================= */
+
+.popular-section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 40px 130px;
+}
+
+.popular-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.discovery-product-card {
+
+    border:
+        1px solid var(--discover-border-soft);
+
+    background:
+        rgba(15, 16, 21, 0.7);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.3s ease;
+}
+
+.discovery-product-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        var(--discover-border);
+}
+
+.product-card-visual {
+
+    height: 300px;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        radial-gradient(circle,
+            rgba(229, 169, 60, 0.08),
+            transparent 60%);
+
+    border-bottom:
+        1px solid var(--discover-border-soft);
+}
+
+.product-symbol {
+
+    font-size: 65px;
+
+    color: var(--discover-gold-light);
+}
+
+.product-card-category,
+.product-card-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+}
+
+.product-card-category {
+
+    left: 18px;
+
+    color: var(--discover-gold);
+}
+
+.product-card-number {
+
+    right: 18px;
+
+    color: var(--discover-muted);
+}
+
+.product-card-info {
+
+    padding: 25px;
+}
+
+.product-card-info h3 {
+
+    margin: 0 0 7px;
+
+    font-family: var(--discover-serif);
+
+    font-size: 19px;
+
+    font-weight: 400;
+}
+
+.product-card-info p {
+
+    margin: 0;
+
+    color: var(--discover-muted);
+
+    font-size: 9px;
+}
+
+.product-card-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    padding-top: 17px;
+
+    border-top:
+        1px solid var(--discover-border-soft);
+
+    color: var(--discover-gold-light);
+
+    font-size: 11px;
+}
+
+.product-card-bottom a {
+
+    display: flex;
+
+    gap: 10px;
+
+    color: var(--discover-gold-light);
+
+    text-decoration: none;
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   FOUR WORLDS
+========================================================= */
+
+.worlds-section {
+
+    padding: 130px 40px;
+
+    border-top:
+        1px solid var(--discover-border-soft);
+
+    border-bottom:
+        1px solid var(--discover-border-soft);
+}
+
+.worlds-heading {
+
+    max-width: 1200px;
+
+    margin: auto auto 70px;
+}
+
+.worlds-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top:
+        1px solid var(--discover-border);
+}
+
+.world-card {
+
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 30px;
+
+    color: var(--discover-text);
+
+    text-decoration: none;
+
+    border-right:
+        1px solid var(--discover-border);
+
+    transition:
+        background 0.35s ease;
+}
+
+.world-card:last-child {
+
+    border-right: none;
+}
+
+.world-card:hover {
+
+    background:
+        rgba(229, 169, 60, 0.045);
+}
+
+.world-number {
+
+    color: var(--discover-muted);
+
+    font-size: 8px;
+
+    letter-spacing: 0.2em;
+}
+
+.world-symbol {
+
+    margin: 65px 0 45px;
+
+    color: var(--discover-gold);
+
+    font-size: 30px;
+}
+
+.world-card h3 {
+
+    margin: 0 0 10px;
+
+    font-family: var(--discover-serif);
+
+    font-size: 20px;
+
+    font-weight: 400;
+}
+
+.world-card p {
+
+    margin: 0;
+
+    color: var(--discover-muted);
+
+    font-size: 9px;
+}
+
+.world-arrow {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    color: var(--discover-gold-light);
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   PEOPLE
+========================================================= */
+
+.people-section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 140px 40px;
+}
+
+.people-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.person-card {
+
+    position: relative;
+
+    min-height: 260px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    color: var(--discover-text);
+
+    text-decoration: none;
+
+    border:
+        1px solid var(--discover-border-soft);
+
+    background:
+        linear-gradient(145deg,
+            rgba(23, 24, 31, 0.8),
+            rgba(10, 11, 15, 0.9));
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.3s ease;
+}
+
+.person-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        var(--discover-border);
+}
+
+.person-avatar {
+
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid var(--discover-gold);
+
+    color: var(--discover-gold-light);
+
+    font-family: var(--discover-serif);
+
+    font-size: 25px;
+}
+
+.person-info h3 {
+
+    margin: 0 0 5px;
+
+    font-family: var(--discover-serif);
+
+    font-size: 19px;
+
+    font-weight: 400;
+}
+
+.person-info p {
+
+    margin: 0 0 15px;
+
+    color: var(--discover-muted);
+
+    font-size: 9px;
+}
+
+.person-info span {
+
+    color: var(--discover-gold);
+
+    font-size: 7px;
+
+    letter-spacing: 0.18em;
+}
+
+.person-arrow {
+
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    color: var(--discover-gold-light);
+}
+
+
+/* =========================================================
+   TRENDING
+========================================================= */
+
+.trending-section {
+
+    padding: 140px 40px;
+
+    background:
+        rgba(11, 12, 16, 0.65);
+
+    border-top:
+        1px solid var(--discover-border-soft);
+
+    border-bottom:
+        1px solid var(--discover-border-soft);
+}
+
+.trending-header {
+
+    max-width: 1200px;
+
+    margin: auto auto 70px;
+}
+
+.trending-list {
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.trending-item {
+
+    display: grid;
+
+    grid-template-columns: 60px 100px 1fr 50px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    min-height: 130px;
+
+    border-top:
+        1px solid var(--discover-border-soft);
+
+    transition:
+        padding 0.3s ease,
+        background 0.3s ease;
+}
+
+.trending-item:last-child {
+
+    border-bottom:
+        1px solid var(--discover-border-soft);
+}
+
+.trending-item:hover {
+
+    padding-left: 15px;
+
+    background:
+        rgba(229, 169, 60, 0.025);
+}
+
+.trending-number {
+
+    color: var(--discover-muted);
+
+    font-family: var(--discover-serif);
+
+    font-size: 17px;
+}
+
+.trending-category {
+
+    color: var(--discover-gold);
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+}
+
+.trending-main h3 {
+
+    margin: 0 0 8px;
+
+    font-family: var(--discover-serif);
+
+    font-size: 22px;
+
+    font-weight: 400;
+}
+
+.trending-main p {
+
+    margin: 0;
+
+    color: var(--discover-muted);
+
+    font-size: 10px;
+}
+
+.trending-arrow {
+
+    color: var(--discover-gold-light);
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   EXPLORE / FILTERS
+========================================================= */
+
+.explore-section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 150px 40px;
+}
+
+.explore-heading {
+
+    margin-bottom: 50px;
+}
+
+.discovery-filters {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+
+    border-bottom:
+        1px solid var(--discover-border-soft);
+}
+
+.discovery-filters button {
+
+    position: relative;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--discover-muted);
+
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+
+    cursor: pointer;
+}
+
+.discovery-filters button.active {
+
+    color: var(--discover-gold-light);
+}
+
+.discovery-filters button.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -1px;
+
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background: var(--discover-gold);
+}
+
+.discovery-search {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    height: 62px;
+
+    padding: 0 20px;
+
+    border:
+        1px solid var(--discover-border);
+
+    background:
+        rgba(16, 17, 22, 0.7);
+}
+
+.discovery-search>span {
+
+    color: var(--discover-gold);
+}
+
+.discovery-search input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--discover-text);
+
+    font-family: var(--discover-sans);
+
+    font-size: 10px;
+
+    letter-spacing: 0.08em;
+}
+
+.discovery-search input::placeholder {
+
+    color: var(--discover-muted);
+}
+
+.discovery-search button {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--discover-gold-light);
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SURPRISE ME
+========================================================= */
+
+.surprise-section {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-top:
+        1px solid var(--discover-border-soft);
+
+    border-bottom:
+        1px solid var(--discover-border-soft);
+}
+
+.surprise-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    text-align: center;
+}
+
+.surprise-content h2 {
+
+    margin: 0;
+
+    font-family: var(--discover-serif);
+
+    font-size: 70px;
+
+    font-weight: 400;
+
+    line-height: 0.9;
+}
+
+.surprise-content h2 em {
+
+    color: var(--discover-gold-light);
+
+    font-style: normal;
+}
+
+.surprise-content p {
+
+    margin: 25px 0;
+
+    color: var(--discover-muted);
+
+    font-size: 11px;
+}
+
+.surprise-button {
+
+    margin-top: 15px;
+
+    padding: 15px 25px;
+
+    border:
+        1px solid var(--discover-border);
+
+    background:
+        rgba(229, 169, 60, 0.05);
+
+    color: var(--discover-gold-light);
+
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.surprise-button span {
+
+    margin-left: 15px;
+
+    font-size: 15px;
+}
+
+.surprise-button:hover {
+
+    background:
+        rgba(229, 169, 60, 0.12);
+
+    border-color:
+        var(--discover-gold);
+}
+
+
+/* =========================================================
+   SURPRISE ORBIT
+========================================================= */
+
+.surprise-orbit {
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+.surprise-orbit div {
+
+    position: absolute;
+
+    inset: 0;
+
+    border:
+        1px solid rgba(229, 169, 60, 0.12);
+
+    border-radius: 50%;
+}
+
+.surprise-orbit div:nth-child(2) {
+
+    inset: 80px;
+
+    transform: rotate(45deg);
+
+    border-radius: 40%;
+}
+
+.surprise-orbit div:nth-child(3) {
+
+    inset: 160px;
+
+    transform: rotate(-35deg);
+}
+
+.surprise-orbit span {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 70px;
+    height: 70px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid var(--discover-gold);
+
+    color: var(--discover-gold-light);
+
+    font-family: var(--discover-serif);
+
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.discover-final {
+
+    min-height: 650px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.discover-final p {
+
+    margin-top: 30px;
+
+    color: var(--discover-muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .discover-hero {
+
+        min-height: 650px;
+    }
+
+    .hero-orbit {
+
+        width: 500px;
+        height: 500px;
+    }
+
+    .select-feature {
+
+        grid-template-columns: 1fr;
+    }
+
+    .select-visual {
+
+        min-height: 320px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--discover-border);
+    }
+
+    .popular-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .worlds-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .world-card:nth-child(2) {
+
+        border-right: none;
+    }
+
+    .people-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .trending-item {
+
+        grid-template-columns:
+            45px 80px 1fr 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .discover-hero {
+
+        min-height: 600px;
+    }
+
+    .discover-hero h1 {
+
+        font-size: 54px;
+    }
+
+    .discover-hero p {
+
+        padding: 0 30px;
+
+        line-height: 1.7;
+    }
+
+    .hero-orbit {
+
+        width: 380px;
+        height: 380px;
+
+        opacity: 0.25;
+    }
+
+    .agora-select-section,
+    .popular-section,
+    .people-section,
+    .explore-section {
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .worlds-section,
+    .trending-section {
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-heading {
+
+        display: block;
+    }
+
+    .section-heading>p {
+
+        margin-top: 25px;
+    }
+
+    .popular-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .worlds-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .world-card {
+
+        min-height: 220px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid var(--discover-border);
+    }
+
+    .people-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .select-content {
+
+        padding: 40px 25px;
+    }
+
+    .select-content h3 {
+
+        font-size: 34px;
+    }
+
+    .trending-item {
+
+        grid-template-columns:
+            35px 1fr 25px;
+
+        gap: 10px;
+
+        padding: 25px 0;
+    }
+
+    .trending-category {
+
+        display: none;
+    }
+
+    .trending-main h3 {
+
+        font-size: 17px;
+    }
+
+    .trending-main p {
+
+        font-size: 9px;
+
+        line-height: 1.6;
+    }
+
+    .surprise-content h2 {
+
+        font-size: 54px;
+    }
+
+    .surprise-orbit {
+
+        width: 400px;
+        height: 400px;
+    }
+
+    .discover-final {
+
+        min-height: 500px;
+
+        padding: 30px;
+    }
+
+    .discover-final h2 {
+
+        font-size: 54px;
+    }
+}

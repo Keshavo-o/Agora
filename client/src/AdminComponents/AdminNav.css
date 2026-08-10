@@ -1,0 +1,871 @@
+.agora-admin-nav {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    height: 66px;
+
+    box-sizing: border-box;
+
+    background: #080807;
+
+    border-bottom:
+        1px solid rgba(198, 161, 91, 0.16);
+
+    color: var(--agora-marble, #E8E4D9);
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================
+   INNER
+========================================= */
+
+.admin-nav-inner {
+
+    width: 100%;
+
+    height: 100%;
+
+    box-sizing: border-box;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.admin-brand {
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--agora-marble, #E8E4D9);
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   BRAND MARK
+========================================= */
+
+.admin-brand-mark {
+
+    width: 29px;
+    height: 29px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid var();
+
+    transform: rotate(45deg);
+}
+
+
+.admin-brand-mark span {
+
+    transform: rotate(-45deg);
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size: 15px;
+
+    line-height: 1;
+
+    color:
+        var(--agora-gold-light, #E1C486);
+}
+
+
+/* =========================================
+   BRAND NAME
+========================================= */
+
+.admin-brand-name {
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size: 15px;
+
+    letter-spacing: 0.26em;
+
+    padding-left: 0.26em;
+}
+
+
+/* =========================================
+   DIVIDER AFTER BRAND
+========================================= */
+
+.admin-nav-divider {
+
+    width: 1px;
+
+    height: 24px;
+
+    margin-left: 28px;
+    margin-right: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================
+   MAIN NAVIGATION
+========================================= */
+
+.admin-navigation {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+
+    flex: 1;
+}
+
+
+/* =========================================
+   NAV ITEM
+========================================= */
+
+.admin-nav-item {
+
+    position: relative;
+
+    height: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 0 13px;
+
+    color:
+        rgba(170, 166, 156, 0.68);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 0.08em;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.admin-nav-item:hover {
+
+    color:
+        var(--agora-marble, #E8E4D9);
+}
+
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.admin-nav-item-active {
+
+    color:
+        var(--agora-gold-light, #E1C486);
+}
+
+
+/* Thin gold architectural line */
+
+.admin-nav-item-active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 13px;
+    right: 13px;
+
+    bottom: 0;
+
+    height: 1px;
+
+    background:
+        var(--agora-gold, #C6A15B);
+}
+
+
+/* =========================================
+   MODERATION BADGE
+========================================= */
+
+.admin-nav-item small {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 15px;
+    height: 15px;
+
+    padding: 0 4px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid rgba(198, 161, 91, 0.35);
+
+    color:
+        var(--agora-gold, #C6A15B);
+
+    font-size: 7px;
+
+    line-height: 1;
+
+    border-radius: 2px;
+}
+
+
+/* =========================================
+   RIGHT ACTIONS
+========================================= */
+
+.admin-nav-actions {
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-left: 25px;
+}
+
+
+/* =========================================
+   NOTIFICATION
+========================================= */
+
+.admin-notification {
+
+    position: relative;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        rgba(170, 166, 156, 0.75);
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.admin-notification:hover {
+
+    color:
+        var(--agora-gold-light, #E1C486);
+}
+
+
+/* Notification indicator */
+
+.admin-notification-dot {
+
+    position: absolute;
+
+    top: 6px;
+    right: 6px;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background:
+        var(--agora-gold, #C6A15B);
+}
+
+
+/* =========================================
+   ACTION DIVIDER
+========================================= */
+
+.admin-action-divider {
+
+    width: 1px;
+
+    height: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+.admin-account {
+
+    position: relative;
+}
+
+
+.admin-account-button {
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 3px 0 0;
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        var(--agora-marble, #E8E4D9);
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   ACCOUNT AVATAR
+========================================= */
+
+.admin-account-avatar {
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(198, 161, 91, 0.38);
+
+    border-radius: 50%;
+
+    color:
+        var(--agora-gold-light, #E1C486);
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   ACCOUNT DETAILS
+========================================= */
+
+.admin-account-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 2px;
+}
+
+
+.admin-account-details span {
+
+    font-size: 9px;
+
+    color:
+        var(--agora-marble, #E8E4D9);
+
+    white-space: nowrap;
+}
+
+
+.admin-account-details small {
+
+    font-size: 7px;
+
+    letter-spacing: 0.18em;
+
+    color:
+        var(--agora-gold, #C6A15B);
+}
+
+
+/* =========================================
+   CHEVRON
+========================================= */
+
+.admin-account-button svg {
+
+    color:
+        rgba(170, 166, 156, 0.6);
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.admin-chevron-open {
+
+    transform:
+        rotate(180deg);
+}
+
+
+/* =========================================
+   ACCOUNT MENU
+========================================= */
+
+.admin-account-menu {
+
+    position: absolute;
+
+    top: calc(100% + 10px);
+
+    right: 0;
+
+    width: 210px;
+
+    padding: 7px;
+
+    box-sizing: border-box;
+
+    background:
+        #0D0D0B;
+
+    border:
+        1px solid rgba(198, 161, 91, 0.2);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.45);
+
+    animation:
+        adminMenuAppear 0.16s ease;
+}
+
+
+@keyframes adminMenuAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-4px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   MENU HEADER
+========================================= */
+
+.admin-menu-heading {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 10px 11px;
+}
+
+
+.admin-menu-heading span {
+
+    color:
+        var(--agora-gold, #C6A15B);
+
+    font-size: 7px;
+
+    letter-spacing: 0.22em;
+}
+
+
+.admin-menu-heading small {
+
+    color:
+        rgba(170, 166, 156, 0.65);
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   MENU DIVIDER
+========================================= */
+
+.admin-menu-line {
+
+    height: 1px;
+
+    margin: 4px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================
+   MENU BUTTONS
+========================================= */
+
+.admin-account-menu button {
+
+    width: 100%;
+
+    height: 37px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        rgba(170, 166, 156, 0.78);
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    border-radius: 2px;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.admin-account-menu button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color:
+        var(--agora-marble, #E8E4D9);
+}
+
+
+.admin-account-menu button svg {
+
+    color:
+        rgba(198, 161, 91, 0.65);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.admin-account-menu .admin-menu-logout {
+
+    color:
+        rgba(190, 125, 110, 0.85);
+}
+
+
+.admin-account-menu .admin-menu-logout:hover {
+
+    color:
+        #C98276;
+
+    background:
+        rgba(190, 80, 65, 0.05);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .admin-nav-inner {
+
+        padding: 0 20px;
+    }
+
+    .admin-nav-divider {
+
+        margin-left: 20px;
+        margin-right: 15px;
+    }
+
+    .admin-nav-item {
+
+        padding: 0 9px;
+
+        font-size: 9px;
+    }
+
+    .admin-nav-item-active::after {
+
+        left: 9px;
+        right: 9px;
+    }
+
+    .admin-nav-actions {
+
+        margin-left: 12px;
+
+        gap: 10px;
+    }
+
+    .admin-account-details {
+
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .agora-admin-nav {
+
+        height: 60px;
+    }
+
+    .admin-nav-inner {
+
+        padding: 0 14px;
+    }
+
+    .admin-brand-name {
+
+        display: none;
+    }
+
+    .admin-nav-divider {
+
+        margin-left: 18px;
+        margin-right: 12px;
+    }
+
+    .admin-navigation {
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .admin-navigation::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    .admin-nav-item {
+
+        flex-shrink: 0;
+
+        padding: 0 10px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.07em;
+    }
+
+    .admin-nav-item-active::after {
+
+        left: 10px;
+        right: 10px;
+    }
+
+    .admin-nav-actions {
+
+        margin-left: 8px;
+
+        gap: 5px;
+    }
+
+    .admin-action-divider {
+
+        display: none;
+    }
+
+    .admin-notification {
+
+        width: 30px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 480px) {
+
+    .admin-nav-inner {
+
+        padding: 0 10px;
+    }
+
+    .admin-brand-mark {
+
+        width: 27px;
+        height: 27px;
+    }
+
+    .admin-brand-mark span {
+
+        font-size: 14px;
+    }
+
+    .admin-nav-divider {
+
+        margin-left: 14px;
+        margin-right: 5px;
+    }
+
+    .admin-nav-item {
+
+        padding: 0 8px;
+
+        font-size: 7px;
+    }
+
+    .admin-nav-item-active::after {
+
+        left: 8px;
+        right: 8px;
+    }
+
+    .admin-account-button {
+
+        padding: 0;
+    }
+
+    .admin-account-button>svg {
+
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .admin-account-menu,
+    .admin-nav-item,
+    .admin-notification,
+    .admin-account-menu button,
+    .admin-account-button svg {
+
+        animation: none;
+
+        transition: none;
+    }
+}

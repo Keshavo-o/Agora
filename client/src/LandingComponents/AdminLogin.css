@@ -1,0 +1,734 @@
+/* =========================================
+   AGORA ADMIN LOGIN
+   Lightweight administrative interface
+========================================= */
+
+:root {
+    --agora-black: #080807;
+    --agora-black-soft: #0D0D0B;
+
+    --agora-gold: #C6A15B;
+    --agora-gold-light: #E1C486;
+    --agora-gold-dark: #80652F;
+
+    --agora-marble: #E8E4D9;
+    --agora-marble-soft: #AAA69C;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.agora-admin-login {
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 45%,
+            rgba(198, 161, 91, 0.055),
+            transparent 32%),
+        linear-gradient(180deg,
+            var(--agora-black),
+            var(--agora-black-soft),
+            var(--agora-black));
+
+    color: var(--agora-marble);
+
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+
+/* =========================================
+   ARCHITECTURAL DECORATION
+   Very lightweight
+========================================= */
+
+.admin-architecture {
+
+    position: absolute;
+
+    top: 12%;
+    bottom: 12%;
+
+    width: 1px;
+
+    background:
+        linear-gradient(to bottom,
+            transparent,
+            rgba(198, 161, 91, 0.18),
+            transparent);
+
+    pointer-events: none;
+}
+
+.admin-architecture-left {
+    left: 8%;
+}
+
+.admin-architecture-right {
+    right: 8%;
+}
+
+
+/* Small horizontal architectural marks */
+
+.admin-architecture::before,
+.admin-architecture::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 38px;
+    height: 1px;
+
+    background: rgba(198, 161, 91, 0.2);
+}
+
+.admin-architecture::before {
+    top: 18%;
+    right: 0;
+}
+
+.admin-architecture::after {
+    bottom: 18%;
+    left: 0;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.admin-login-container {
+
+    width: min(420px, calc(100% - 40px));
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.admin-brand {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 42px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.admin-logo {
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--agora-gold);
+
+    transform: rotate(45deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 24px;
+
+    box-shadow:
+        0 0 25px rgba(198, 161, 91, 0.06);
+}
+
+
+.admin-logo span {
+
+    transform: rotate(-45deg);
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 25px;
+
+    color: var(--agora-gold-light);
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   AGORA BRAND NAME
+========================================= */
+
+.admin-brand-name {
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 17px;
+
+    letter-spacing: 0.32em;
+
+    color: var(--agora-marble);
+
+    padding-left: 0.32em;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.admin-label {
+
+    font-size: 9px;
+
+    letter-spacing: 0.3em;
+
+    color: var(--agora-gold);
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.admin-login-container h1 {
+
+    margin: 0;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: clamp(28px, 5vw, 38px);
+
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+
+    line-height: 1.15;
+
+    text-align: center;
+
+    color: var(--agora-marble);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.admin-description {
+
+    max-width: 330px;
+
+    margin: 14px 0 36px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: var(--agora-marble-soft);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.admin-login-form {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+/* =========================================
+   FIELD
+========================================= */
+
+.admin-field {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.admin-field label {
+
+    font-size: 9px;
+
+    letter-spacing: 0.22em;
+
+    color: var(--agora-marble-soft);
+}
+
+
+.admin-field input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 2px;
+
+    outline: none;
+
+    color: var(--agora-marble);
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.admin-field input::placeholder {
+
+    color: rgba(170, 166, 156, 0.45);
+}
+
+
+.admin-field input:hover {
+
+    background: rgba(255, 255, 255, 0.035);
+}
+
+
+.admin-field input:focus {
+
+    border-color: rgba(198, 161, 91, 0.65);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    box-shadow:
+        0 0 20px rgba(198, 161, 91, 0.06);
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.admin-login-button {
+
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 8px;
+
+    border: 1px solid var(--agora-gold);
+
+    border-radius: 2px;
+
+    background: var(--agora-gold);
+
+    color: var(--agora-black);
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.admin-login-button span {
+
+    margin-left: 12px;
+
+    font-size: 15px;
+
+    transition: transform 0.25s ease;
+}
+
+
+.admin-login-button:hover {
+
+    transform: translateY(-2px);
+
+    background: var(--agora-gold-light);
+
+    box-shadow:
+        0 8px 25px rgba(198, 161, 91, 0.10);
+}
+
+
+.admin-login-button:hover span {
+
+    display: inline-block;
+
+    transform: translateX(4px);
+}
+
+
+.admin-login-button:active {
+
+    transform: translateY(0);
+}
+
+
+.admin-login-button:disabled {
+
+    cursor: not-allowed;
+
+    opacity: 0.65;
+
+    transform: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.admin-login-footer {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 42px;
+}
+
+
+.admin-login-footer span {
+
+    height: 1px;
+
+    flex: 1;
+
+    background: rgba(198, 161, 91, 0.14);
+}
+
+
+.admin-login-footer p {
+
+    margin: 0;
+
+    white-space: nowrap;
+
+    font-size: 8px;
+
+    letter-spacing: 0.22em;
+
+    color: rgba(170, 166, 156, 0.55);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .admin-architecture-left {
+        left: 4%;
+    }
+
+    .admin-architecture-right {
+        right: 4%;
+    }
+
+    .admin-login-container {
+
+        width: min(380px,
+                calc(100% - 48px));
+    }
+
+    .admin-brand {
+
+        margin-bottom: 34px;
+    }
+
+    .admin-logo {
+
+        width: 42px;
+        height: 42px;
+    }
+
+    .admin-logo span {
+
+        font-size: 22px;
+    }
+
+    .admin-description {
+
+        margin-bottom: 30px;
+    }
+
+}
+
+
+/* =========================================
+   REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .admin-field input,
+    .admin-login-button,
+    .admin-login-button span {
+
+        transition: none;
+    }
+}
+
+/* =========================================
+   BACK TO HOME
+========================================= */
+
+.admin-back-home {
+
+    position: absolute;
+
+    top: 28px;
+    left: 32px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 8px 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--agora-marble-soft);
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.18em;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.admin-back-home span {
+
+    font-size: 15px;
+
+    color: var(--agora-gold);
+}
+
+.admin-back-home:hover {
+
+    color: var(--agora-gold-light);
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================================
+   LOGIN ERROR
+========================================= */
+
+.admin-login-error {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 12px 13px;
+
+    border: 1px solid rgba(190, 80, 65, 0.35);
+
+    border-left: 2px solid rgba(190, 80, 65, 0.75);
+
+    background: rgba(190, 80, 65, 0.045);
+
+    border-radius: 2px;
+
+    animation: adminErrorIn 0.25s ease;
+}
+
+.admin-error-icon {
+
+    flex-shrink: 0;
+
+    width: 17px;
+    height: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(190, 80, 65, 0.6);
+
+    border-radius: 50%;
+
+    color: #C98276;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.admin-login-error p {
+
+    margin: 1px 0 0;
+
+    color: #C9A49D;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+@keyframes adminErrorIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   ADMIN NOTICE
+========================================= */
+
+.admin-notice {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 28px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(198, 161, 91, 0.14);
+
+    text-align: center;
+}
+
+.admin-notice-title {
+
+    margin-bottom: 9px;
+
+    color: var(--agora-gold);
+
+    font-size: 8px;
+
+    letter-spacing: 0.25em;
+
+    font-weight: 500;
+}
+
+.admin-notice p {
+
+    max-width: 360px;
+
+    margin: 5px auto;
+
+    color: rgba(170, 166, 156, 0.65);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .admin-back-home {
+
+        top: 20px;
+        left: 20px;
+
+        font-size: 8px;
+    }
+
+    .admin-login-container {
+
+        margin-top: 45px;
+    }
+
+    .admin-notice {
+
+        margin-top: 24px;
+    }
+}

@@ -1,0 +1,1141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================================================
+   AGORA SIGNUP
+   Ancient Greek Architecture × Modern Digital Interface
+========================================================= */
+
+:root {
+
+    --agora-black: #080807;
+    --agora-black-soft: #0d0d0b;
+
+    --agora-gold: #c6a15b;
+    --agora-gold-light: #e1c486;
+    --agora-gold-dark: #80652f;
+
+    --agora-marble: #e8e4d9;
+    --agora-marble-soft: #aaa69c;
+    --agora-stone: #69655c;
+
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.agora-signup {
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--agora-black);
+
+    color: var(--agora-marble);
+
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   GRAIN
+========================================================= */
+
+.signup-grain {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    opacity: 0.025;
+
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.8) 0.5px,
+            transparent 0.5px);
+
+    background-size: 5px 5px;
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.signup-orbit {
+
+    position: absolute;
+
+    border: 1px solid rgba(198, 161, 91, 0.035);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.signup-orbit-one {
+
+    width: 700px;
+    height: 700px;
+
+    left: 18%;
+    top: 48%;
+
+    animation:
+        signupOrbitRotate 42s linear infinite;
+}
+
+
+.signup-orbit-two {
+
+    width: 1000px;
+    height: 1000px;
+
+    right: -15%;
+    top: -25%;
+
+    border-color: rgba(198, 161, 91, 0.02);
+
+    animation:
+        signupOrbitReverse 60s linear infinite;
+}
+
+
+/* =========================================================
+   BACK TO HOME
+========================================================= */
+
+.signup-back-home {
+
+    position: absolute;
+
+    top: 34px;
+    left: 42px;
+
+    z-index: 50;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: rgba(232, 228, 217, 0.45);
+
+    font-family: "DM Sans", sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.signup-back-icon {
+
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid rgba(198, 161, 91, 0.25);
+
+    color: var(--agora-gold);
+
+    font-size: 15px;
+
+    font-weight: 300;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.signup-back-text {
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.22em;
+
+    white-space: nowrap;
+}
+
+
+.signup-back-home:hover {
+
+    color: var(--agora-gold-light);
+
+    transform: translateX(-3px);
+}
+
+
+.signup-back-home:hover .signup-back-icon {
+
+    border-color: var(--agora-gold);
+
+    background: rgba(198, 161, 91, 0.07);
+
+    transform: translateX(-3px);
+
+    box-shadow:
+        0 0 18px rgba(198, 161, 91, 0.08);
+}
+
+
+/* =========================================================
+   LEFT BRAND PANEL
+========================================================= */
+
+.signup-brand-panel {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 42px 7vw 36px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 50%,
+            rgba(198, 161, 91, 0.065),
+            transparent 45%),
+        linear-gradient(110deg,
+            #080807,
+            #0a0a09);
+}
+
+
+/* Architectural frame */
+
+.signup-brand-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 28px;
+
+    border: 1px solid rgba(198, 161, 91, 0.06);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.signup-brand-top {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.signup-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+}
+
+
+.signup-logo-frame {
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid var(--agora-gold);
+
+    transform: rotate(45deg);
+
+    box-shadow:
+        0 0 25px rgba(198, 161, 91, 0.08);
+}
+
+
+.signup-logo-frame span {
+
+    transform: rotate(-45deg);
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 18px;
+
+    color: var(--agora-gold-light);
+}
+
+
+.signup-logo-text {
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 15px;
+
+    letter-spacing: 0.35em;
+
+    color: var(--agora-marble);
+}
+
+
+.signup-brand-label {
+
+    padding-left: 28px;
+
+    border-left: 1px solid rgba(198, 161, 91, 0.2);
+
+    color: var(--agora-gold);
+
+    font-size: 8px;
+
+    letter-spacing: 0.28em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   BRAND CONTENT
+========================================================= */
+
+.signup-brand-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 560px;
+
+    margin-left: 4vw;
+}
+
+
+.signup-brand-kicker {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 25px;
+
+    color: var(--agora-gold);
+
+    font-size: 10px;
+
+    letter-spacing: 0.35em;
+}
+
+
+.signup-brand-kicker::before {
+
+    content: "";
+
+    width: 28px;
+    height: 1px;
+
+    background: var(--agora-gold);
+}
+
+
+.signup-brand-content h1 {
+
+    margin: 0;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-weight: 500;
+
+    font-size: clamp(60px, 7vw, 110px);
+
+    line-height: 0.88;
+
+    letter-spacing: -0.035em;
+
+    color: var(--agora-marble);
+}
+
+
+.signup-brand-content h1 em {
+
+    font-style: normal;
+
+    color: transparent;
+
+    background:
+        linear-gradient(135deg,
+            #f1d99d,
+            #c6a15b,
+            #80652f);
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+}
+
+
+.signup-brand-content p {
+
+    margin-top: 38px;
+
+    margin-left: 6px;
+
+    color: var(--agora-marble-soft);
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    font-weight: 300;
+
+    letter-spacing: 0.015em;
+}
+
+
+/* =========================================================
+   BRAND BOTTOM
+========================================================= */
+
+.signup-brand-bottom {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-left: 4vw;
+
+    color: rgba(232, 228, 217, 0.25);
+
+    font-size: 8px;
+
+    letter-spacing: 0.3em;
+}
+
+
+.signup-brand-diamond {
+
+    color: var(--agora-gold);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.signup-divider {
+
+    position: absolute;
+
+    z-index: 10;
+
+    left: 50%;
+
+    top: 0;
+
+    height: 100%;
+
+    width: 1px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+
+.signup-divider-line {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 100%;
+
+    background:
+        linear-gradient(to bottom,
+            transparent 5%,
+            rgba(198, 161, 91, 0.18) 30%,
+            rgba(198, 161, 91, 0.18) 70%,
+            transparent 95%);
+}
+
+
+.signup-divider-diamond {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 24px;
+    height: 24px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: var(--agora-gold);
+
+    font-size: 12px;
+
+    background: var(--agora-black);
+}
+
+
+/* =========================================================
+   RIGHT FORM PANEL
+========================================================= */
+
+.signup-form-panel {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 55px 8vw 70px;
+
+    background:
+        radial-gradient(circle at 50% 45%,
+            rgba(198, 161, 91, 0.035),
+            transparent 45%),
+        var(--agora-black-soft);
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+========================================================= */
+
+.signup-form-wrapper {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   FORM HEADING
+========================================================= */
+
+.signup-form-heading {
+
+    margin-bottom: 32px;
+}
+
+
+.signup-form-kicker {
+
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: var(--agora-gold);
+
+    font-size: 10px;
+
+    letter-spacing: 0.35em;
+
+    font-weight: 600;
+}
+
+
+.signup-form-heading h2 {
+
+    margin: 0;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: clamp(34px, 4vw, 50px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.02em;
+
+    color: var(--agora-marble);
+}
+
+
+.signup-form-heading h2 em {
+
+    font-style: normal;
+
+    color: var(--agora-gold-light);
+}
+
+
+.signup-form-heading p {
+
+    margin-top: 17px;
+
+    color: var(--agora-marble-soft);
+
+    font-size: 13px;
+
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.agora-signup-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 19px;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.signup-field label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: rgba(232, 228, 217, 0.5);
+
+    font-size: 10px;
+
+    letter-spacing: 0.25em;
+
+    font-weight: 600;
+}
+
+
+.signup-field input {
+
+    width: 100%;
+
+    height: 51px;
+
+    box-sizing: border-box;
+
+    padding: 0 17px;
+
+    border: 1px solid rgba(232, 228, 217, 0.12);
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.018);
+
+    color: var(--agora-marble);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.signup-field input::placeholder {
+
+    color: rgba(232, 228, 217, 0.18);
+}
+
+
+.signup-field input:focus {
+
+    border-color: rgba(198, 161, 91, 0.6);
+
+    background: rgba(198, 161, 91, 0.025);
+
+    box-shadow:
+        0 0 0 1px rgba(198, 161, 91, 0.05),
+        0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.signup-password-input {
+
+    position: relative;
+}
+
+
+.signup-password-input input {
+
+    padding-right: 75px;
+}
+
+
+.signup-show-password {
+
+    position: absolute;
+
+    right: 17px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    padding: 0;
+
+    background: none;
+
+    color: rgba(198, 161, 91, 0.65);
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    letter-spacing: 0.16em;
+
+    cursor: pointer;
+}
+
+
+.signup-show-password:hover {
+
+    color: var(--agora-gold-light);
+}
+
+
+/* =========================================================
+   SIGNUP BUTTON
+========================================================= */
+
+.agora-signup-button {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 57px;
+
+    margin-top: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 21px;
+
+    border: 1px solid var(--agora-gold);
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(135deg,
+            #d2ad68,
+            #a8813e);
+
+    color: #090908;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.agora-signup-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.25),
+            transparent);
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+
+
+.agora-signup-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 35px rgba(198, 161, 91, 0.15);
+}
+
+
+.agora-signup-button:hover::before {
+
+    left: 140%;
+}
+
+
+.agora-signup-button span {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.signup-button-arrow {
+
+    font-size: 18px;
+
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   LOGIN SECTION
+========================================================= */
+
+.login-section {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 21px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.login-section>span {
+
+    color: rgba(232, 228, 217, 0.3);
+
+    font-size: 10px;
+
+    letter-spacing: 0.16em;
+}
+
+
+.login-section a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--agora-gold-light);
+
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+
+.login-section a:hover {
+
+    color: white;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.signup-form-footer {
+
+    position: absolute;
+
+    bottom: 27px;
+
+    left: 8vw;
+    right: 8vw;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: rgba(232, 228, 217, 0.18);
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes signupOrbitRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes signupOrbitReverse {
+
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .agora-signup {
+
+        grid-template-columns: 0.9fr 1.1fr;
+    }
+
+    .signup-brand-panel {
+
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .signup-form-panel {
+
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .signup-brand-content {
+
+        margin-left: 1vw;
+    }
+
+    .signup-brand-bottom {
+
+        margin-left: 1vw;
+    }
+
+    .signup-brand-label {
+
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .agora-signup {
+
+        display: block;
+
+        overflow-y: auto;
+    }
+
+
+    .signup-brand-panel {
+
+        min-height: 52vh;
+
+        padding: 80px 28px 40px;
+
+        justify-content: space-between;
+    }
+
+
+    .signup-brand-panel::before {
+
+        inset: 18px;
+    }
+
+
+    .signup-brand-content {
+
+        margin: 40px 0 30px;
+    }
+
+
+    .signup-brand-content h1 {
+
+        font-size: clamp(55px, 17vw, 90px);
+    }
+
+
+    .signup-brand-content p {
+
+        margin-top: 25px;
+    }
+
+
+    .signup-brand-bottom {
+
+        margin-left: 0;
+    }
+
+
+    .signup-divider {
+
+        display: none;
+    }
+
+
+    .signup-form-panel {
+
+        min-height: 70vh;
+
+        padding: 65px 28px 100px;
+    }
+
+
+    .signup-form-wrapper {
+
+        max-width: none;
+    }
+
+
+    .signup-form-heading h2 {
+
+        font-size: 40px;
+    }
+
+
+    .signup-form-footer {
+
+        bottom: 25px;
+
+        left: 28px;
+        right: 28px;
+    }
+
+
+    .signup-back-home {
+
+        top: 24px;
+
+        left: 26px;
+    }
+
+
+    .signup-orbit-one {
+
+        width: 450px;
+        height: 450px;
+    }
+
+
+    .signup-orbit-two {
+
+        width: 650px;
+        height: 650px;
+    }
+
+}

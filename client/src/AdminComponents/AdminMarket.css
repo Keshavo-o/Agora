@@ -1,0 +1,1152 @@
+body {
+    background-color: #F4F1E9;
+}
+
+.admin-market-page {
+
+    background-color: #F4F1E9;
+
+    width: 100%;
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 48px 42px 60px;
+
+    box-sizing: border-box;
+
+    color: #292823;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-market-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    padding-bottom: 32px;
+
+    border-bottom:
+        1px solid rgba(70, 64, 52, 0.14);
+}
+
+
+.admin-market-label {
+
+    margin-bottom: 12px;
+
+    color: #A27C3D;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.22em;
+}
+
+
+.admin-market-header h1 {
+
+    margin: 0;
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    color: #292823;
+}
+
+
+.admin-market-header p {
+
+    margin: 9px 0 0;
+
+    color: #77736A;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MARKET SUMMARY
+========================================= */
+
+.admin-market-summary {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 5px;
+}
+
+
+.admin-market-summary span {
+
+    color: #969188;
+
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+}
+
+
+.admin-market-summary strong {
+
+    color: #65745D;
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.admin-market-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    margin-bottom: 35px;
+
+    border-bottom:
+        1px solid rgba(70, 64, 52, 0.13);
+
+    background:
+        rgba(255, 253, 247, 0.55);
+}
+
+
+.admin-market-stat {
+
+    min-height: 135px;
+
+    padding: 24px 26px;
+
+    border-right:
+        1px solid rgba(70, 64, 52, 0.1);
+
+    box-sizing: border-box;
+}
+
+
+.admin-market-stat:last-child {
+
+    border-right: none;
+}
+
+
+.admin-market-stat-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+    color: #8A857B;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.17em;
+}
+
+
+.admin-market-stat-top svg {
+
+    color: #A27C3D;
+}
+
+
+.admin-market-stat strong {
+
+    display: block;
+
+    color: #2D2A24;
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 400;
+}
+
+
+.admin-market-stat p {
+
+    margin: 6px 0 0;
+
+    color: #969188;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.admin-market-toolbar {
+
+    min-height: 74px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom:
+        1px solid rgba(70, 64, 52, 0.12);
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.admin-market-search {
+
+    width: 350px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid rgba(70, 64, 52, 0.16);
+
+    background:
+        rgba(255, 253, 247, 0.65);
+
+    transition:
+        border-color 0.2s ease;
+}
+
+
+.admin-market-search:focus-within {
+
+    border-color:
+        rgba(162, 124, 61, 0.55);
+}
+
+
+.admin-market-search svg {
+
+    color: #99948A;
+
+    flex-shrink: 0;
+}
+
+
+.admin-market-search input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #36332C;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+}
+
+
+.admin-market-search input::placeholder {
+
+    color: #A39E94;
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.admin-market-filter {
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 12px;
+
+    border:
+        1px solid rgba(70, 64, 52, 0.16);
+
+    background:
+        rgba(255, 253, 247, 0.65);
+}
+
+
+.admin-market-filter select {
+
+    min-width: 125px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #5E5A51;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-market-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-bottom:
+        1px solid rgba(70, 64, 52, 0.13);
+}
+
+
+.admin-market-table {
+
+    width: 100%;
+
+    min-width: 850px;
+
+    border-collapse: collapse;
+}
+
+
+.admin-market-table th {
+
+    height: 48px;
+
+    padding: 0 12px;
+
+    text-align: left;
+
+    color: #8A857B;
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    border-bottom:
+        1px solid rgba(70, 64, 52, 0.13);
+}
+
+
+.admin-market-table th:first-child,
+.admin-market-table td:first-child {
+
+    padding-left: 5px;
+}
+
+
+.admin-market-table th:last-child,
+.admin-market-table td:last-child {
+
+    width: 45px;
+
+    padding-right: 5px;
+}
+
+
+/* =========================================
+   TABLE ROW
+========================================= */
+
+.admin-market-table tbody tr {
+
+    height: 73px;
+
+    border-bottom:
+        1px solid rgba(70, 64, 52, 0.075);
+
+    transition:
+        background 0.18s ease;
+}
+
+
+.admin-market-table tbody tr:last-child {
+
+    border-bottom: none;
+}
+
+
+.admin-market-table tbody tr:hover {
+
+    background:
+        rgba(162, 124, 61, 0.035);
+}
+
+
+.admin-market-table td {
+
+    padding: 0 12px;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   LISTING
+========================================= */
+
+.admin-market-listing {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.admin-market-product-icon {
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(162, 124, 61, 0.24);
+
+    background:
+        #F7F4EC;
+
+    color:
+        #A27C3D;
+}
+
+
+.admin-market-listing>div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.admin-market-listing strong {
+
+    color: #3A372F;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+.admin-market-listing span {
+
+    color: #99948A;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   SELLER
+========================================= */
+
+.admin-market-seller {
+
+    color: #5E5A51;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.admin-market-category {
+
+    color: #77736A;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.admin-market-price {
+
+    color: #39362F;
+
+    font-family:
+        "Cinzel",
+        Georgia,
+        serif;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-market-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 9px;
+}
+
+
+.admin-market-status i {
+
+    width: 5px;
+    height: 5px;
+
+    display: block;
+
+    border-radius: 50%;
+}
+
+
+/* Active */
+
+.admin-market-status-active {
+
+    color: #65745D;
+}
+
+
+.admin-market-status-active i {
+
+    background: #65745D;
+}
+
+
+/* Pending */
+
+.admin-market-status-pending {
+
+    color: #A27C3D;
+}
+
+
+.admin-market-status-pending i {
+
+    background: #A27C3D;
+}
+
+
+/* Reported */
+
+.admin-market-status-reported {
+
+    color: #A56F55;
+}
+
+
+.admin-market-status-reported i {
+
+    background: #A56F55;
+}
+
+
+/* Sold */
+
+.admin-market-status-sold {
+
+    color: #88837A;
+}
+
+
+.admin-market-status-sold i {
+
+    background: #88837A;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.admin-market-date {
+
+    color: #88837A;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.admin-market-action {
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #99948A;
+
+    cursor: pointer;
+
+    transition:
+        color 0.18s ease,
+        background 0.18s ease;
+}
+
+
+.admin-market-action:hover {
+
+    color: #A27C3D;
+
+    background:
+        rgba(162, 124, 61, 0.07);
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.admin-market-empty {
+
+    height: 150px;
+
+    text-align: center;
+
+    color: #99948A;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.admin-market-footer {
+
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.admin-market-footer>span {
+
+    color: #99948A;
+
+    font-size: 9px;
+}
+
+
+.admin-market-footer-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #78856F;
+
+    font-size: 9px;
+
+    letter-spacing: 0.03em;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .admin-market-page {
+
+        padding:
+            38px 25px 50px;
+    }
+
+
+    .admin-market-summary {
+
+        display: none;
+    }
+
+
+    .admin-market-search {
+
+        width: 280px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .admin-market-page {
+
+        padding:
+            32px 18px 45px;
+    }
+
+
+    .admin-market-header {
+
+        padding-bottom: 27px;
+    }
+
+
+    .admin-market-header h1 {
+
+        font-size: 22px;
+    }
+
+
+    .admin-market-header p {
+
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+
+    .admin-market-stats {
+
+        grid-template-columns: 1fr;
+
+        margin-bottom: 25px;
+    }
+
+
+    .admin-market-stat {
+
+        min-height: auto;
+
+        padding: 19px 5px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(70, 64, 52, 0.09);
+    }
+
+
+    .admin-market-stat:last-child {
+
+        border-bottom: none;
+    }
+
+
+    .admin-market-toolbar {
+
+        min-height: auto;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 16px 0;
+
+        gap: 9px;
+    }
+
+
+    .admin-market-search {
+
+        width: 100%;
+    }
+
+
+    .admin-market-filter {
+
+        width: 100%;
+    }
+
+
+    .admin-market-filter select {
+
+        width: 100%;
+    }
+
+
+    .admin-market-footer {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        padding: 15px 0;
+    }
+
+}
+
+
+/* =========================================
+   AGORA MARKET — LARGER TYPOGRAPHY OVERRIDE
+   Paste at the VERY END of the CSS
+========================================= */
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-market-label {
+    font-size: 11px;
+    letter-spacing: 0.20em;
+}
+
+.admin-market-header h1 {
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.admin-market-header p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MARKET SUMMARY
+========================================= */
+
+.admin-market-summary span {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+}
+
+.admin-market-summary strong {
+    font-size: 17px;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.admin-market-stat-top {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+}
+
+.admin-market-stat strong {
+    font-size: 36px;
+}
+
+.admin-market-stat p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.admin-market-search input {
+    font-size: 13px;
+}
+
+.admin-market-search input::placeholder {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.admin-market-filter select {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.admin-market-table th {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+}
+
+
+/* =========================================
+   TABLE CONTENT
+========================================= */
+
+.admin-market-table td {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   LISTING
+========================================= */
+
+.admin-market-listing strong {
+    font-size: 13px;
+}
+
+.admin-market-listing span {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   SELLER
+========================================= */
+
+.admin-market-seller {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.admin-market-category {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.admin-market-price {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-market-status {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.admin-market-date {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.admin-market-empty {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.admin-market-footer>span {
+    font-size: 11px;
+}
+
+.admin-market-footer-status {
+    font-size: 11px;
+}
+
+
+/* =========================================
+   MOBILE TYPOGRAPHY
+========================================= */
+
+@media (max-width: 600px) {
+
+    .admin-market-label {
+        font-size: 10px;
+    }
+
+    .admin-market-header h1 {
+        font-size: 26px;
+    }
+
+    .admin-market-header p {
+        font-size: 13px;
+    }
+
+    .admin-market-stat-top {
+        font-size: 10px;
+    }
+
+    .admin-market-stat strong {
+        font-size: 32px;
+    }
+
+    .admin-market-stat p {
+        font-size: 11px;
+    }
+
+    .admin-market-search input {
+        font-size: 13px;
+    }
+
+    .admin-market-filter select {
+        font-size: 11px;
+    }
+
+    .admin-market-table th {
+        font-size: 9px;
+    }
+
+    .admin-market-table td {
+        font-size: 11px;
+    }
+
+    .admin-market-listing strong {
+        font-size: 12px;
+    }
+
+    .admin-market-listing span {
+        font-size: 10px;
+    }
+
+    .admin-market-seller {
+        font-size: 11px;
+    }
+
+    .admin-market-category {
+        font-size: 11px;
+    }
+
+    .admin-market-price {
+        font-size: 12px;
+    }
+
+    .admin-market-status {
+        font-size: 10px;
+    }
+
+    .admin-market-date {
+        font-size: 10px;
+    }
+
+    .admin-market-footer>span {
+        font-size: 10px;
+    }
+
+    .admin-market-footer-status {
+        font-size: 10px;
+    }
+}

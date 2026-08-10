@@ -1,0 +1,278 @@
+:root {
+    --agora-black: #080807;
+    --agora-marble: #e8e4d9;
+    --agora-gold: #c6a15b;
+    --agora-gold-light: #e1c486;
+}
+
+.agora-loading {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(198, 161, 91, 0.06),
+            transparent 35%),
+        var(--agora-black);
+
+    color: var(--agora-marble);
+
+    overflow: hidden;
+}
+
+/* Subtle background circles */
+
+.agora-loading::before,
+.agora-loading::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(198, 161, 91, 0.07);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.agora-loading::before {
+    width: 420px;
+    height: 420px;
+
+    animation: rotateOrbit 18s linear infinite;
+}
+
+.agora-loading::after {
+    width: 620px;
+    height: 620px;
+
+    border-color: rgba(198, 161, 91, 0.035);
+
+    animation: rotateOrbitReverse 25s linear infinite;
+}
+
+
+/* =========================================
+   A SYMBOL
+   ========================================= */
+
+.loading-symbol {
+    position: relative;
+
+    width: 76px;
+    height: 76px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(198, 161, 91, 0.7);
+
+    transform: rotate(45deg);
+
+    animation: symbolAppear 1s ease forwards;
+}
+
+.loading-symbol::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border: 1px solid rgba(198, 161, 91, 0.2);
+}
+
+.loading-symbol span {
+    transform: rotate(-45deg);
+
+    color: var(--agora-gold-light);
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 30px;
+
+    text-shadow:
+        0 0 25px rgba(198, 161, 91, 0.25);
+}
+
+
+/* =========================================
+   BRAND
+   ========================================= */
+
+.loading-brand {
+    margin-top: 28px;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 17px;
+
+    letter-spacing: 0.42em;
+
+    color: var(--agora-marble);
+
+    animation: fadeUp 1s ease 0.2s both;
+}
+
+
+/* =========================================
+   LOADING LINE
+   ========================================= */
+
+.loading-line {
+    width: 170px;
+    height: 1px;
+
+    margin-top: 38px;
+
+    background: rgba(198, 161, 91, 0.15);
+
+    overflow: hidden;
+
+    animation: fadeUp 1s ease 0.35s both;
+}
+
+.loading-progress {
+    width: 35%;
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            var(--agora-gold),
+            var(--agora-gold-light));
+
+    animation: loadingProgress 1.8s ease-in-out infinite;
+}
+
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+.loading-text {
+    margin-top: 18px;
+
+    color: rgba(232, 228, 217, 0.3);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 0.35em;
+
+    animation: fadeUp 1s ease 0.45s both;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes loadingProgress {
+
+    0% {
+        transform: translateX(-180%);
+    }
+
+    50% {
+        transform: translateX(250%);
+    }
+
+    100% {
+        transform: translateX(450%);
+    }
+}
+
+
+@keyframes symbolAppear {
+
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) scale(0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes rotateOrbit {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes rotateOrbitReverse {
+
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .loading-symbol {
+        width: 65px;
+        height: 65px;
+    }
+
+    .loading-symbol span {
+        font-size: 25px;
+    }
+
+    .loading-brand {
+        font-size: 14px;
+        letter-spacing: 0.35em;
+    }
+
+    .loading-line {
+        width: 140px;
+    }
+
+    .agora-loading::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .agora-loading::after {
+        width: 450px;
+        height: 450px;
+    }
+}

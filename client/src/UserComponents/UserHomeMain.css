@@ -1,0 +1,2266 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================================================
+   AGORA USER HOME
+   Ancient Greek Architecture × Modern Digital Agora
+========================================================= */
+
+:root {
+
+    --home-bg: #080806;
+    --home-bg-soft: #0d0d0b;
+    --home-bg-card: #11110e;
+
+    --home-gold: #c6a15b;
+    --home-gold-light: #e1c486;
+    --home-gold-dark: #80642f;
+
+    --home-text: #e8e4d9;
+    --home-text-soft: rgba(232, 228, 217, 0.62);
+    --home-text-muted: rgba(232, 228, 217, 0.35);
+
+    --home-border: rgba(198, 161, 91, 0.18);
+    --home-border-soft: rgba(232, 228, 217, 0.08);
+
+    --home-serif: "Cinzel", Georgia, serif;
+    --home-sans: "DM Sans", sans-serif;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.agora-user-home {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(198, 161, 91, 0.055),
+            transparent 32%),
+        var(--home-bg);
+
+    color: var(--home-text);
+
+    font-family: var(--home-sans);
+}
+
+
+/* =========================================================
+   GRAIN
+========================================================= */
+
+.agora-user-home::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    opacity: 0.035;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.agora-section {
+
+    position: relative;
+
+    width: min(1320px, calc(100% - 100px));
+
+    margin: 0 auto;
+
+    padding: 150px 0;
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 70px;
+
+}
+
+
+.section-kicker {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--home-gold);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.32em;
+
+}
+
+
+.section-heading h2 {
+
+    margin: 0;
+
+    color: var(--home-text);
+
+    font-family: var(--home-serif);
+
+    font-size: clamp(34px, 4vw, 62px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.025em;
+
+}
+
+
+.section-heading h2 em {
+
+    color: var(--home-gold-light);
+
+    font-style: normal;
+
+}
+
+
+.section-index {
+
+    color: var(--home-text-muted);
+
+    font-family: var(--home-serif);
+
+    font-size: 10px;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.section-link {
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--home-border);
+
+    color: var(--home-gold-light);
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    transition:
+        border-color 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+.section-link:hover {
+
+    color: #fff;
+
+    border-color: var(--home-gold);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.agora-home-hero {
+
+    position: relative;
+
+    min-height: calc(100vh - 76px);
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--home-border-soft);
+
+}
+
+
+/* =========================================================
+   HERO BACKGROUND GRID
+========================================================= */
+
+.agora-home-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.5;
+
+    background-image:
+        linear-gradient(90deg,
+            transparent 49.9%,
+            rgba(198, 161, 91, 0.055) 50%,
+            transparent 50.1%),
+        linear-gradient(0deg,
+            transparent 49.9%,
+            rgba(198, 161, 91, 0.035) 50%,
+            transparent 50.1%);
+
+    background-size:
+        240px 240px,
+        240px 240px;
+
+}
+
+
+/* =========================================================
+   HERO GLOW
+========================================================= */
+
+.agora-home-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    top: 50%;
+    right: -220px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(198, 161, 91, 0.07),
+            transparent 68%);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   HERO ARCHITECTURE
+========================================================= */
+
+.hero-architecture {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.65;
+
+}
+
+
+.hero-architecture::before,
+.hero-architecture::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        linear-gradient(transparent,
+            rgba(198, 161, 91, 0.22),
+            transparent);
+
+}
+
+
+.hero-architecture::before {
+
+    left: 17%;
+
+}
+
+
+.hero-architecture::after {
+
+    right: 17%;
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(650px, 55%);
+
+    margin-left: 10%;
+
+}
+
+
+.hero-kicker {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+
+    color: var(--home-gold);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.32em;
+
+}
+
+
+.hero-kicker::before {
+
+    content: "";
+
+    width: 32px;
+
+    height: 1px;
+
+    background: var(--home-gold);
+
+}
+
+
+.hero-content h1 {
+
+    margin: 0;
+
+    font-family: var(--home-serif);
+
+    font-size: clamp(48px, 6vw, 92px);
+
+    font-weight: 500;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.04em;
+
+}
+
+
+.hero-content h1 em {
+
+    color: var(--home-gold-light);
+
+    font-style: normal;
+
+}
+
+
+.hero-content p {
+
+    margin: 34px 0 0;
+
+    color: var(--home-text-soft);
+
+    font-size: 15px;
+
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    letter-spacing: 0.02em;
+
+}
+
+
+/* =========================================================
+   HERO ACTIONS
+========================================================= */
+
+.hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 42px;
+
+}
+
+
+.hero-primary-button,
+.hero-secondary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 48px;
+
+    padding: 0 24px;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.17em;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.hero-primary-button {
+
+    gap: 25px;
+
+    color: #0a0907;
+
+    background:
+        linear-gradient(135deg,
+            #e1c486,
+            #ae8540);
+
+}
+
+
+.hero-primary-button span {
+
+    font-size: 16px;
+
+}
+
+
+.hero-primary-button:hover {
+
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(135deg,
+            #f0d79d,
+            #c6a15b);
+
+}
+
+
+.hero-secondary-button {
+
+    border: 1px solid var(--home-border);
+
+    color: var(--home-gold-light);
+
+    background: rgba(198, 161, 91, 0.025);
+
+}
+
+
+.hero-secondary-button:hover {
+
+    transform: translateY(-3px);
+
+    border-color: rgba(198, 161, 91, 0.5);
+
+    background: rgba(198, 161, 91, 0.08);
+
+}
+
+
+/* =========================================================
+   HERO MONUMENT
+========================================================= */
+
+.hero-monument {
+
+    position: absolute;
+
+    z-index: 2;
+
+    right: 11%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 330px;
+
+    height: 430px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    opacity: 0.75;
+
+}
+
+
+/* =========================================================
+   COLUMNS
+========================================================= */
+
+.monument-column {
+
+    position: relative;
+
+    width: 52px;
+
+    height: 100%;
+
+    border-left: 1px solid rgba(198, 161, 91, 0.17);
+
+    border-right: 1px solid rgba(198, 161, 91, 0.17);
+
+    background:
+        repeating-linear-gradient(90deg,
+            transparent 0,
+            transparent 9px,
+            rgba(198, 161, 91, 0.035) 10px,
+            transparent 11px);
+
+}
+
+
+.monument-column::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -7px;
+
+    width: calc(100% + 14px);
+
+    height: 9px;
+
+    border-top: 1px solid rgba(198, 161, 91, 0.3);
+
+    border-bottom: 1px solid rgba(198, 161, 91, 0.12);
+
+}
+
+
+.monument-column::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: -7px;
+
+    width: calc(100% + 14px);
+
+    height: 9px;
+
+    border-top: 1px solid rgba(198, 161, 91, 0.12);
+
+    border-bottom: 1px solid rgba(198, 161, 91, 0.3);
+
+}
+
+
+/* =========================================================
+   MONUMENT CENTER
+========================================================= */
+
+.monument-center {
+
+    width: 100px;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    border-left: 1px solid rgba(198, 161, 91, 0.08);
+
+    border-right: 1px solid rgba(198, 161, 91, 0.08);
+
+}
+
+
+.monument-diamond {
+
+    width: 80px;
+
+    height: 80px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid rgba(198, 161, 91, 0.45);
+
+    transform: rotate(45deg);
+
+    color: var(--home-gold-light);
+
+    font-family: var(--home-serif);
+
+    font-size: 25px;
+
+    box-shadow:
+        0 0 40px rgba(198, 161, 91, 0.07);
+
+}
+
+
+.monument-diamond::first-letter {
+
+    transform: rotate(-45deg);
+
+}
+
+
+.monument-center>span {
+
+    color: var(--home-text-muted);
+
+    font-family: var(--home-serif);
+
+    font-size: 8px;
+
+    letter-spacing: 0.35em;
+
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.hero-scroll-indicator {
+
+    position: absolute;
+
+    z-index: 4;
+
+    bottom: 32px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--home-text-muted);
+
+    font-size: 7px;
+
+    letter-spacing: 0.24em;
+
+}
+
+
+.scroll-line {
+
+    width: 1px;
+
+    height: 35px;
+
+    background:
+        linear-gradient(var(--home-gold),
+            transparent);
+
+    animation:
+        scrollPulse 2s infinite ease-in-out;
+
+}
+
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scaleY(0.65);
+        transform-origin: top;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+}
+
+
+/* =========================================================
+   PULSE
+========================================================= */
+
+.agora-pulse {
+
+    border-bottom: 1px solid var(--home-border-soft);
+
+}
+
+
+.pulse-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 1fr;
+
+    border-top: 1px solid var(--home-border);
+
+    border-bottom: 1px solid var(--home-border);
+
+}
+
+
+.pulse-card {
+
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 34px;
+
+    box-sizing: border-box;
+
+    border-right: 1px solid var(--home-border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        background 0.35s ease;
+
+}
+
+
+.pulse-card:last-child {
+
+    border-right: none;
+
+}
+
+
+.pulse-card:hover {
+
+    background:
+        rgba(198, 161, 91, 0.035);
+
+}
+
+
+.pulse-number {
+
+    color: var(--home-gold-dark);
+
+    font-family: var(--home-serif);
+
+    font-size: 10px;
+
+}
+
+
+.pulse-label {
+
+    color: var(--home-gold);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.pulse-card h3 {
+
+    margin: auto 0 28px;
+
+    font-family: var(--home-serif);
+
+    font-size: clamp(21px, 2vw, 29px);
+
+    font-weight: 400;
+
+    line-height: 1.3;
+
+}
+
+
+.pulse-card a {
+
+    color: var(--home-text-muted);
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.17em;
+
+    transition: color 0.25s ease;
+
+}
+
+
+.pulse-card a:hover {
+
+    color: var(--home-gold-light);
+
+}
+
+
+/* =========================================================
+   MARKETPLACE
+========================================================= */
+
+.agora-market {
+
+    border-bottom: 1px solid var(--home-border-soft);
+
+}
+
+
+.market-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+.market-card {
+
+    min-width: 0;
+
+}
+
+
+.market-image {
+
+    position: relative;
+
+    height: 390px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 40%,
+            rgba(198, 161, 91, 0.13),
+            transparent 40%),
+        #11110e;
+
+    border: 1px solid var(--home-border-soft);
+
+    transition:
+        border-color 0.35s ease,
+        transform 0.35s ease;
+
+}
+
+
+.market-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 35px;
+
+    border: 1px solid rgba(198, 161, 91, 0.09);
+
+}
+
+
+.market-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%) rotate(45deg);
+
+    border: 1px solid rgba(198, 161, 91, 0.22);
+
+}
+
+
+.market-image span {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--home-text-muted);
+
+    font-size: 8px;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.market-card:hover .market-image {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(198, 161, 91, 0.35);
+
+}
+
+
+.image-two {
+
+    background:
+        radial-gradient(circle at 40% 50%,
+            rgba(110, 132, 124, 0.12),
+            transparent 40%),
+        #10110f;
+
+}
+
+
+.image-three {
+
+    background:
+        radial-gradient(circle at 60% 45%,
+            rgba(122, 102, 73, 0.13),
+            transparent 40%),
+        #11100d;
+
+}
+
+
+.market-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 2px;
+
+}
+
+
+.market-info span {
+
+    color: var(--home-gold);
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.market-info h3 {
+
+    margin: 8px 0 0;
+
+    font-family: var(--home-serif);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+
+.market-info strong {
+
+    color: var(--home-text-soft);
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   DISCOVERY
+========================================================= */
+
+.agora-discover {
+
+    min-height: 620px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    border-bottom: 1px solid var(--home-border-soft);
+
+}
+
+
+.discover-intro {
+
+    max-width: 530px;
+
+}
+
+
+.discover-intro h2 {
+
+    margin: 0;
+
+    font-family: var(--home-serif);
+
+    font-size: clamp(38px, 4vw, 65px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+}
+
+
+.discover-intro h2 em {
+
+    color: var(--home-gold-light);
+
+    font-style: normal;
+
+}
+
+
+.discover-intro p {
+
+    max-width: 410px;
+
+    margin: 30px 0;
+
+    color: var(--home-text-soft);
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+
+}
+
+
+.text-arrow-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    color: var(--home-gold-light);
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.text-arrow-link span {
+
+    font-size: 17px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.text-arrow-link:hover span {
+
+    transform: translate(3px, -3px);
+
+}
+
+
+/* =========================================================
+   ORBIT
+========================================================= */
+
+.discover-orbit {
+
+    position: relative;
+
+    width: min(500px, 100%);
+
+    aspect-ratio: 1;
+
+    margin: auto;
+
+}
+
+
+.orbit-ring {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    border: 1px solid rgba(198, 161, 91, 0.14);
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    animation:
+        orbitRotate 25s linear infinite;
+
+}
+
+
+.ring-one {
+
+    width: 40%;
+
+    height: 40%;
+
+}
+
+
+.ring-two {
+
+    width: 68%;
+
+    height: 68%;
+
+    animation-duration: 35s;
+
+    animation-direction: reverse;
+
+}
+
+
+.ring-three {
+
+    width: 92%;
+
+    height: 92%;
+
+    animation-duration: 50s;
+
+}
+
+
+@keyframes orbitRotate {
+
+    from {
+        transform:
+            translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%) rotate(360deg);
+    }
+
+}
+
+
+.orbit-center {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 90px;
+    height: 90px;
+
+    display: grid;
+
+    place-items: center;
+
+    transform:
+        translate(-50%, -50%) rotate(45deg);
+
+    border: 1px solid var(--home-gold);
+
+    color: var(--home-gold-light);
+
+    font-family: var(--home-serif);
+
+    font-size: 25px;
+
+    box-shadow:
+        0 0 50px rgba(198, 161, 91, 0.08);
+
+}
+
+
+.orbit-point {
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--home-gold);
+
+    box-shadow:
+        0 0 14px rgba(198, 161, 91, 0.55);
+
+}
+
+
+.point-one {
+
+    top: 13%;
+    left: 67%;
+
+}
+
+
+.point-two {
+
+    bottom: 21%;
+    left: 17%;
+
+}
+
+
+.point-three {
+
+    top: 60%;
+    right: 2%;
+
+}
+
+
+/* =========================================================
+   COMMUNITY
+========================================================= */
+
+.agora-community {
+
+    border-bottom: 1px solid var(--home-border-soft);
+
+}
+
+
+.community-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr;
+
+    border-top: 1px solid var(--home-border);
+
+}
+
+
+.community-feature {
+
+    min-height: 400px;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    border-right: 1px solid var(--home-border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.community-symbol {
+
+    color: var(--home-gold);
+
+    font-size: 25px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.community-label {
+
+    color: var(--home-gold);
+
+    font-size: 8px;
+
+    letter-spacing: 0.22em;
+
+}
+
+
+.community-feature h3 {
+
+    max-width: 430px;
+
+    margin: 18px 0;
+
+    font-family: var(--home-serif);
+
+    font-size: clamp(25px, 3vw, 39px);
+
+    font-weight: 400;
+
+    line-height: 1.25;
+
+}
+
+
+.community-feature p {
+
+    margin: 0 0 30px;
+
+    color: var(--home-text-muted);
+
+    font-size: 11px;
+
+}
+
+
+.community-feature a {
+
+    color: var(--home-gold-light);
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+}
+
+
+/* =========================================================
+   COMMUNITY LIST
+========================================================= */
+
+.community-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.community-item {
+
+    min-height: 130px;
+
+    display: grid;
+
+    grid-template-columns: 60px 1fr 30px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 30px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid var(--home-border);
+
+    transition:
+        background 0.3s ease;
+
+}
+
+
+.community-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.community-item:hover {
+
+    background:
+        rgba(198, 161, 91, 0.035);
+
+}
+
+
+.community-item>span {
+
+    color: var(--home-gold-dark);
+
+    font-family: var(--home-serif);
+
+    font-size: 10px;
+
+}
+
+
+.community-item small {
+
+    color: var(--home-gold);
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.community-item h4 {
+
+    margin: 8px 0 0;
+
+    color: var(--home-text);
+
+    font-family: var(--home-serif);
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+}
+
+
+.community-item b {
+
+    color: var(--home-text-muted);
+
+    font-weight: 300;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.community-item:hover b {
+
+    color: var(--home-gold);
+
+    transform: translateX(4px);
+
+}
+
+
+/* =========================================================
+   FINAL SECTION
+========================================================= */
+
+.agora-final {
+
+    position: relative;
+
+    min-height: 680px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+}
+
+
+.agora-final::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    border: 1px solid rgba(198, 161, 91, 0.07);
+
+    border-radius: 50%;
+
+}
+
+
+.agora-final::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border: 1px solid rgba(198, 161, 91, 0.07);
+
+    border-radius: 50%;
+
+}
+
+
+.final-diamond {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 72px;
+    height: 72px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid var(--home-gold);
+
+    transform: rotate(45deg);
+
+    color: var(--home-gold-light);
+
+    font-family: var(--home-serif);
+
+    font-size: 20px;
+
+    margin-bottom: 38px;
+
+}
+
+
+.agora-final>span {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--home-gold);
+
+    font-size: 8px;
+
+    letter-spacing: 0.3em;
+
+}
+
+
+.agora-final h2 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 28px 0 38px;
+
+    font-family: var(--home-serif);
+
+    font-size: clamp(42px, 6vw, 78px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+}
+
+
+.agora-final h2 em {
+
+    color: var(--home-gold-light);
+
+    font-style: normal;
+
+}
+
+
+.final-button {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    height: 48px;
+
+    padding: 0 25px;
+
+    color: #0a0907;
+
+    background: var(--home-gold-light);
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.final-button span {
+
+    font-size: 17px;
+
+}
+
+
+.final-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #f0d79d;
+
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .agora-section {
+
+        width: min(100% - 60px, 900px);
+
+    }
+
+
+    .hero-content {
+
+        margin-left: 7%;
+
+        width: 60%;
+
+    }
+
+
+    .hero-monument {
+
+        right: 4%;
+
+        transform:
+            translateY(-50%) scale(0.85);
+
+    }
+
+
+    .market-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .market-card-featured {
+
+        grid-column: span 2;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .agora-section {
+
+        width: calc(100% - 50px);
+
+        padding: 110px 0;
+
+    }
+
+
+    .agora-home-hero {
+
+        min-height: 750px;
+
+    }
+
+
+    .hero-content {
+
+        width: 70%;
+
+        margin-left: 7%;
+
+    }
+
+
+    .hero-monument {
+
+        right: -50px;
+
+        opacity: 0.35;
+
+    }
+
+
+    .pulse-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .pulse-card {
+
+        min-height: 230px;
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--home-border);
+
+    }
+
+
+    .pulse-card:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .agora-discover {
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+    }
+
+
+    .discover-orbit {
+
+        width: min(430px, 80vw);
+
+    }
+
+
+    .community-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .community-feature {
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--home-border);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .agora-user-home {
+
+        padding-bottom: 72px;
+
+    }
+
+
+    .agora-section {
+
+        width: calc(100% - 36px);
+
+        padding: 85px 0;
+
+    }
+
+
+    /* =============================================
+       HERO
+    ============================================= */
+
+    .agora-home-hero {
+
+        min-height: calc(100svh - 68px);
+
+        align-items: center;
+
+    }
+
+
+    .hero-content {
+
+        width: calc(100% - 36px);
+
+        margin: 0 18px;
+
+    }
+
+
+    .hero-kicker {
+
+        font-size: 7px;
+
+        letter-spacing: 0.22em;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: clamp(42px, 12vw, 64px);
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+        margin-top: 25px;
+
+    }
+
+
+    .hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 230px;
+
+        margin-top: 30px;
+
+    }
+
+
+    .hero-primary-button,
+    .hero-secondary-button {
+
+        width: 100%;
+
+    }
+
+
+    .hero-monument {
+
+        right: -130px;
+
+        transform:
+            translateY(-50%) scale(0.62);
+
+        opacity: 0.22;
+
+    }
+
+
+    .hero-architecture::before {
+
+        left: 10%;
+
+    }
+
+
+    .hero-architecture::after {
+
+        right: 10%;
+
+    }
+
+
+    .hero-scroll-indicator {
+
+        display: none;
+
+    }
+
+
+    /* =============================================
+       HEADINGS
+    ============================================= */
+
+    .section-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 45px;
+
+        gap: 20px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: clamp(31px, 9vw, 45px);
+
+    }
+
+
+    .section-index {
+
+        display: none;
+
+    }
+
+
+    /* =============================================
+       MARKET
+    ============================================= */
+
+    .market-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .market-card-featured {
+
+        grid-column: auto;
+
+    }
+
+
+    .market-image {
+
+        height: 330px;
+
+    }
+
+
+    /* =============================================
+       DISCOVERY
+    ============================================= */
+
+    .agora-discover {
+
+        gap: 50px;
+
+    }
+
+
+    .discover-intro h2 {
+
+        font-size: clamp(36px, 10vw, 52px);
+
+    }
+
+
+    .discover-intro p {
+
+        font-size: 13px;
+
+    }
+
+
+    .discover-orbit {
+
+        width: 82vw;
+
+    }
+
+
+    .orbit-center {
+
+        width: 70px;
+        height: 70px;
+
+        font-size: 20px;
+
+    }
+
+
+    /* =============================================
+       COMMUNITY
+    ============================================= */
+
+    .community-feature {
+
+        min-height: 340px;
+
+        padding: 30px;
+
+    }
+
+
+    .community-feature h3 {
+
+        font-size: 27px;
+
+    }
+
+
+    .community-item {
+
+        min-height: 105px;
+
+        grid-template-columns: 35px 1fr 20px;
+
+        gap: 10px;
+
+        padding: 15px;
+
+    }
+
+
+    .community-item h4 {
+
+        font-size: 12px;
+
+    }
+
+
+    /* =============================================
+       FINAL
+    ============================================= */
+
+    .agora-final {
+
+        min-height: 580px;
+
+    }
+
+
+    .agora-final::before {
+
+        width: 430px;
+        height: 430px;
+
+    }
+
+
+    .agora-final::after {
+
+        width: 290px;
+        height: 290px;
+
+    }
+
+
+    .final-diamond {
+
+        width: 60px;
+        height: 60px;
+
+    }
+
+
+    .agora-final h2 {
+
+        font-size: clamp(40px, 12vw, 60px);
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .agora-section {
+
+        width: calc(100% - 28px);
+
+        padding: 70px 0;
+
+    }
+
+
+    .hero-content {
+
+        width: calc(100% - 28px);
+
+        margin-left: 14px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .hero-actions {
+
+        width: 210px;
+
+    }
+
+
+    .pulse-card {
+
+        min-height: 210px;
+
+        padding: 25px;
+
+    }
+
+
+    .market-image {
+
+        height: 280px;
+
+    }
+
+
+    .community-feature {
+
+        padding: 25px;
+
+    }
+
+}

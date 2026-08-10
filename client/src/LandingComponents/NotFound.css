@@ -1,0 +1,726 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+.agora-not-found {
+
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(198, 161, 91, 0.055),
+            transparent 42%),
+        #080807;
+
+    color: #e8e4d9;
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================================================
+   GRAIN
+========================================================= */
+
+.not-found-grain {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    opacity: 0.025;
+
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.8) 0.5px,
+            transparent 0.5px);
+
+    background-size: 5px 5px;
+}
+
+
+/* =========================================================
+   ORBITS
+========================================================= */
+
+.not-found-orbit {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(198, 161, 91, 0.045);
+
+    pointer-events: none;
+}
+
+
+.orbit-one {
+
+    width: 650px;
+    height: 650px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    animation:
+        orbitRotate 45s linear infinite;
+}
+
+
+.orbit-two {
+
+    width: 950px;
+    height: 950px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-color: rgba(198, 161, 91, 0.025);
+
+    animation:
+        orbitReverse 65s linear infinite;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.not-found-brand {
+
+    position: absolute;
+
+    top: 38px;
+    left: 45px;
+
+    z-index: 30;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+}
+
+
+.not-found-logo-frame {
+
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid #c6a15b;
+
+    transform: rotate(45deg);
+
+    box-shadow:
+        0 0 25px rgba(198, 161, 91, 0.08);
+}
+
+
+.not-found-logo-frame span {
+
+    transform: rotate(-45deg);
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 17px;
+
+    color: #e1c486;
+}
+
+
+.not-found-logo-text {
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 14px;
+
+    letter-spacing: 0.35em;
+
+    color: #e8e4d9;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.not-found-content {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: min(650px, 90%);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   KICKER
+========================================================= */
+
+.not-found-kicker {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: #c6a15b;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4em;
+}
+
+
+.not-found-kicker::before,
+.not-found-kicker::after {
+
+    content: "";
+
+    width: 30px;
+
+    height: 1px;
+
+    background: rgba(198, 161, 91, 0.5);
+}
+
+
+/* =========================================================
+   404
+========================================================= */
+
+.not-found-number {
+
+    margin-top: 24px;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: clamp(120px, 19vw, 240px);
+
+    line-height: 0.8;
+
+    letter-spacing: -0.06em;
+
+    color: transparent;
+
+    background:
+        linear-gradient(135deg,
+            #f1d99d 0%,
+            #c6a15b 40%,
+            #80652f 75%,
+            #d9b96e 100%);
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    opacity: 0.9;
+
+    text-shadow:
+        0 0 70px rgba(198, 161, 91, 0.07);
+
+    animation:
+        numberReveal 1.2s ease forwards;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.not-found-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 30px auto 25px;
+
+    width: 270px;
+}
+
+
+.not-found-divider span {
+
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(to right,
+            transparent,
+            rgba(198, 161, 91, 0.4));
+}
+
+
+.not-found-divider span:last-child {
+
+    background:
+        linear-gradient(to left,
+            transparent,
+            rgba(198, 161, 91, 0.4));
+}
+
+
+.not-found-divider div {
+
+    color: #c6a15b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.not-found-content h1 {
+
+    margin: 0;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    letter-spacing: -0.02em;
+}
+
+
+.not-found-content h1 em {
+
+    font-style: normal;
+
+    color: #c6a15b;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.not-found-content p {
+
+    margin-top: 22px;
+
+    color: rgba(232, 228, 217, 0.4);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+
+    letter-spacing: 0.02em;
+}
+
+
+/* =========================================================
+   RETURN BUTTON
+========================================================= */
+
+.return-home-button {
+
+    position: relative;
+
+    margin-top: 36px;
+
+    height: 54px;
+
+    min-width: 245px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
+    padding: 0 20px;
+
+    border: 1px solid #c6a15b;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(135deg,
+            #d2ad68,
+            #a8813e);
+
+    color: #090908;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.return-home-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -100%;
+    top: 0;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+
+
+.return-home-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 40px rgba(198, 161, 91, 0.16);
+}
+
+
+.return-home-button:hover::before {
+
+    left: 140%;
+}
+
+
+.return-home-button span {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.return-home-arrow {
+
+    font-size: 18px;
+
+    font-weight: 300;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.return-home-button:hover .return-home-arrow {
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.not-found-bottom {
+
+    position: absolute;
+
+    z-index: 30;
+
+    bottom: 28px;
+
+    left: 45px;
+    right: 45px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: rgba(232, 228, 217, 0.18);
+
+    font-size: 7px;
+
+    letter-spacing: 0.25em;
+}
+
+
+/* =========================================================
+   ARCHITECTURAL CORNERS
+========================================================= */
+
+.corner {
+
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.corner::before,
+.corner::after {
+
+    content: "";
+
+    position: absolute;
+
+    background: rgba(198, 161, 91, 0.18);
+}
+
+
+.corner-top-left {
+
+    top: 28px;
+    left: 28px;
+
+    border-top: 1px solid rgba(198, 161, 91, 0.18);
+    border-left: 1px solid rgba(198, 161, 91, 0.18);
+}
+
+
+.corner-top-right {
+
+    top: 28px;
+    right: 28px;
+
+    border-top: 1px solid rgba(198, 161, 91, 0.18);
+    border-right: 1px solid rgba(198, 161, 91, 0.18);
+}
+
+
+.corner-bottom-left {
+
+    bottom: 28px;
+    left: 28px;
+
+    border-bottom: 1px solid rgba(198, 161, 91, 0.18);
+    border-left: 1px solid rgba(198, 161, 91, 0.18);
+}
+
+
+.corner-bottom-right {
+
+    bottom: 28px;
+    right: 28px;
+
+    border-bottom: 1px solid rgba(198, 161, 91, 0.18);
+    border-right: 1px solid rgba(198, 161, 91, 0.18);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes orbitRotate {
+
+    from {
+        transform:
+            translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+@keyframes orbitReverse {
+
+    from {
+        transform:
+            translate(-50%, -50%) rotate(360deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+
+@keyframes numberReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px) scale(0.96);
+    }
+
+    to {
+
+        opacity: 0.9;
+
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .not-found-brand {
+
+        top: 27px;
+        left: 28px;
+    }
+
+
+    .not-found-logo-frame {
+
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .not-found-logo-text {
+
+        font-size: 12px;
+    }
+
+
+    .not-found-content {
+
+        width: 90%;
+    }
+
+
+    .not-found-number {
+
+        font-size: 130px;
+    }
+
+
+    .not-found-divider {
+
+        width: 200px;
+
+        margin-top: 24px;
+        margin-bottom: 22px;
+    }
+
+
+    .not-found-content h1 {
+
+        font-size: 28px;
+    }
+
+
+    .not-found-content p {
+
+        font-size: 12px;
+    }
+
+
+    .return-home-button {
+
+        min-width: 220px;
+
+        height: 52px;
+    }
+
+
+    .not-found-bottom {
+
+        left: 28px;
+        right: 28px;
+
+        bottom: 22px;
+
+        font-size: 6px;
+    }
+
+
+    .corner {
+
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .corner-top-left,
+    .corner-top-right {
+
+        top: 18px;
+    }
+
+
+    .corner-bottom-left,
+    .corner-bottom-right {
+
+        bottom: 18px;
+    }
+
+
+    .corner-top-left,
+    .corner-bottom-left {
+
+        left: 18px;
+    }
+
+
+    .corner-top-right,
+    .corner-bottom-right {
+
+        right: 18px;
+    }
+
+}
