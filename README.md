@@ -14,24 +14,23 @@ Agora is a production-oriented multi-vendor e-commerce platform inspired by the 
 
 ## Features
 
-*  Authentication & role-based authorization
-*  Product browsing, search, filtering & pagination
-*  Multi-seller shopping cart
-*  Wishlist
-*  Order & inventory management
-*  Payment-ready checkout architecture
-*  Seller store management
-*  Coupon & discount system
-*  Product reviews & ratings
-*  Redis caching
-*  Redis-based rate limiting
-*  Idempotent order processing
-*  API & request validation
-*  Security middleware, CORS & HTTP-only cookies
-*  Seller & admin analytics
-*  Structured logging & centralized error handling
-*  Health-check endpoints
-*  Nginx reverse proxy
+* **Multi-server architecture** with dedicated User and Admin backend servers
+* **Nginx**-based request routing and reverse proxy
+* **Redis** caching and cache invalidation strategies
+* Redis-backed distributed** rate limiting**
+* Stateless **authentication** and role-based access control
+* Secure HTTP-only cookie authentication
+* Defense-in-depth API **security** and **request** **validation**
+* Idempotent APIs for safe request retries
+* **Request tracing** with unique request IDs
+* **Health-check** and service-readiness endpoints
+* **Database indexing** and **optimized** **query** patterns
+* **Pagination** and **aggregation-based data processing**
+* **Dockerized** services with reproducible environments (LATER)
+* CI/CD-ready deployment architecture
+* Graceful shutdown and **failure handling**
+* **Production-oriented API and infrastructure design**
+
 
 
 ## Architecture
