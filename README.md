@@ -65,7 +65,9 @@ Agora is a production-oriented multi-vendor e-commerce platform inspired by the 
 Agora is currently under active development. Features, architecture, and infrastructure will continue to evolve as the project progresses toward a production-ready release.
 
 ## Proposed system architecture
-<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/e95f6614-75f9-4424-b7b0-c9967402a394" />
+<!-- <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/e95f6614-75f9-4424-b7b0-c9967402a394" /> -->
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f3500be6-4f13-4d3e-8d4c-e3c94decc705" />
+
 
 ### Key Design Principles
 
