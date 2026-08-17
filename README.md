@@ -64,4 +64,26 @@ Agora is a production-oriented multi-vendor e-commerce platform inspired by the 
 
 Agora is currently under active development. Features, architecture, and infrastructure will continue to evolve as the project progresses toward a production-ready release.
 
+## Proposed system architecture
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/e95f6614-75f9-4424-b7b0-c9967402a394" />
+
+### Key Design Principles
+
+1.  User and Admin traffic are separated.
+2.  NGINX is the single entry point for backend traffic.
+3.  User Server handles both Buyer and Seller workflows.
+4.  Admin Server handles platform-level operations.
+5.  Redis is used for caching, rate limiting, temporary data,
+    distributed locks, and recommendation caching.
+6.  MongoDB is the persistent source of truth.
+7.  Recommendation processing is isolated from the core commerce request
+    path.
+8.  Recommendation failure must not break shopping.
+9.  APIs are designed to be stateless and horizontally scalable.
+10. Critical operations such as order creation are idempotent.
+11. Health checks distinguish liveness from readiness.
+12. Docker and CI/CD provide reproducible deployment.
+
+
+
 > **Agora - Everything. One Place.**
